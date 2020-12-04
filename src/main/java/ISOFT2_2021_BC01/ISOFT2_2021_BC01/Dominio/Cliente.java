@@ -1,4 +1,4 @@
-package isoft22021bc01.isoft2.bc01.Dominio;
+package ISOFT2_2021_BC01.ISOFT2_2021_BC01.Dominio;
 
 public class Cliente {
 

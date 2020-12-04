@@ -1,0 +1,20 @@
+package ISOFT2_2021_BC01.ISOFT2_2021_BC01;
+
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+{
+    /**
+     * Rigorous Test :-)
+     */
+    @Test
+    public void shouldAnswerWithTrue()
+    {
+        assertTrue( true );
+    }
+}

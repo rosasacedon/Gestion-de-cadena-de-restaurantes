@@ -1,11 +1,11 @@
-package isoft22021bc01.isoft2.bc01.Dominio;
+package ISOFT2_2021_BC01.ISOFT2_2021_BC01.Dominio;
 
 public class Mesa {
 
     private int id_mesa;
     private int num_comensales_int;
     private Estados estado;
-    private Camarero camarero;
+    private Camarero_Sala camarero;
     private Jefe_de_Sala jefeSala;
 
     public int getId_mesa() {
@@ -32,7 +32,7 @@ public class Mesa {
         this.estado = estado;
     }
 
-    public Camarero getCamarero() {
+    public Camarero_Sala getCamarero() {
         return camarero;
     }
 
@@ -40,7 +40,7 @@ public class Mesa {
         return jefeSala;
     }
 
-    public void setCamarero(Camarero camarero) {
+    public void setCamarero(Camarero_Sala camarero) {
         this.camarero = camarero;
     }
 

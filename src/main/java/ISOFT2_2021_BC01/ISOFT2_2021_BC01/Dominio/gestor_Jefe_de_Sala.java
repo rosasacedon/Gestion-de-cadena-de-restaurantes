@@ -1,16 +1,30 @@
-package isoft22021bc01.isoft2.bc01.Dominio;
+package ISOFT2_2021_BC01.ISOFT2_2021_BC01.Dominio;
+
+import java.util.ArrayList;
 
 public class gestor_Jefe_de_Sala {
 
-    private Camarero camarero;
+    private Camarero_Sala camarero;
     private Mesa mesa;
+   
     
     public void asignarCamarero() {
-        mesa.setCamarero(camarero);
+    	ArrayList<Camarero_Sala> lcamarero = new ArrayList<Camarero_Sala>();
+    	for(int i=0;i<lcamarero.size();i++) {
+    		mesa.setCamarero(lcamarero.get(i));
+    	}
+        
     }
 
     public void asignarMesa() {
-        camarero.setMesa(mesa);
+    	if(mesa.getNum_comensales_int()==2 || mesa.getNum_comensales_int()==4 || mesa.getNum_comensales_int()==6) {
+    		System.out.println("Mesa reservada correctamente.");
+    		gestion_estados_mesa("Reservada");
+    		camarero.setMesa(mesa);
+    	} else {
+    		System.out.println("Mesa no disponible.");
+    	}
+        
     }
 
     public void gestion_estados_mesa(String opcion){
@@ -53,11 +67,11 @@ public class gestor_Jefe_de_Sala {
         this.mesa = mesa;
     }
     
-    public void setCamarero(Camarero camarero) {
+    public void setCamarero(Camarero_Sala camarero) {
         this.camarero = camarero;
     }
 
-    public Camarero getCamarero() {
+    public Camarero_Sala getCamarero() {
         return camarero;
     }
 
