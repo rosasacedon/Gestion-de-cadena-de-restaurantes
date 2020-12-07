@@ -11,6 +11,7 @@ public class gestor_Jefe_de_Sala {
     public void asignarCamarero() {
     	Random r= new Random();
     	ArrayList<Camarero_Sala> lcamarero = new ArrayList<Camarero_Sala>();
+        //Hemos simulado 5 camareros sala hasta que tengamos la BBDD
     	lcamarero.add(new Camarero_Sala(5452144, "Pepe reyes", mesa));
     	lcamarero.add(new Camarero_Sala(1561562, "Marina Perez", mesa));
     	lcamarero.add(new Camarero_Sala(5616516, "Ana Rio", mesa));
