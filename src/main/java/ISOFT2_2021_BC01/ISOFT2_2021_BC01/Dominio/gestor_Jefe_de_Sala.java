@@ -1,19 +1,24 @@
 package ISOFT2_2021_BC01.ISOFT2_2021_BC01.Dominio;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class gestor_Jefe_de_Sala {
 
     private Camarero_Sala camarero;
     private Mesa mesa;
-   
     
     public void asignarCamarero() {
+    	Random r= new Random();
     	ArrayList<Camarero_Sala> lcamarero = new ArrayList<Camarero_Sala>();
-    	for(int i=0;i<lcamarero.size();i++) {
-    		mesa.setCamarero(lcamarero.get(i));
-    	}
-        
+    	lcamarero.add(new Camarero_Sala(5452144, "Pepe reyes", mesa));
+    	lcamarero.add(new Camarero_Sala(1561562, "Marina Perez", mesa));
+    	lcamarero.add(new Camarero_Sala(5616516, "Ana Rio", mesa));
+    	lcamarero.add(new Camarero_Sala(7856162, "Rosa Martinez", mesa));
+    	lcamarero.add(new Camarero_Sala(1161649, "Ismael Gutierrez", mesa));
+    	
+    	mesa.setCamarero(lcamarero.get(r.nextInt(lcamarero.size() - 1)));
+    	
     }
 
     public void asignarMesa() {
