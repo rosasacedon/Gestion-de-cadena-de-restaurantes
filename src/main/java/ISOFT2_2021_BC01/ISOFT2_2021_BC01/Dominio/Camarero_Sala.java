@@ -6,6 +6,11 @@ public class Camarero_Sala {
     private String nombre;
     private Mesa mesa;
 
+    public Camarero_Sala(int id, String nombre, Mesa mesa) {
+    	this.id_camarero=id;
+    	this.nombre=nombre;
+    	this.mesa=mesa;
+    }
     public int getId_camarero() {
         return id_camarero;
     }
