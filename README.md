@@ -1,12 +1,12 @@
 # Gestion-de-cadena-de-restaurantes
 
 La realización del proyecto ha ido seguido por una serie de reuniones que hemos podido realizar semanalmente los sabados sobre las 11:00 h, o bien a las 16:00 h. 
-Lo primero que hemos establecido es la separación de los seis miembros del equipo en tres subequipos de trabajo. En el equipo 1 podemos encontrar a Sergio Cañadillas y Víctor Martín; Equipo 2 formado por Ana Díaz y Guiomar Pareja; y, finalmente, el equipo de trabajo 3 por Marta Gallego y Rosa María Sacedón. 
+Lo primero que hemos establecido es la separación de los seis miembros del equipo en tres subequipos de trabajo. En el equipo 1 podemos encontrar a Sergio Cañadillas Pérez (sergiocp1997) y Víctor Martín Alonso (Riku97); Equipo 2 formado por Ana Díaz Muñoz (aniitadiazm) y Guiomar Pareja de Diego (GuiomarPareja); y, finalmente, el equipo de trabajo 3 por Marta Gallego Adán (martagallegoadan) y Rosa María Sacedón Ortega (rosasacedon). 
 Cada equipo de trabajo ha realizado los diagramas correspondientes a las iteraciones que se les han asignado en base a la planificación. 
 
-    Equipo 1 -> Sergio y Víctor -> iteración 3
-    Equipo 2 -> Ana y Guiomar -> iteración 2
-    Equipo 3 -> Marta y Rosa -> iteración 1
+    Equipo 1 -> Sergio  y Víctor  -> iteración 3
+    Equipo 2 -> Ana  y Guiomar  -> iteración 2
+    Equipo 3 -> Marta  y Rosa  -> iteración 1
 
 En la iteración 4 hemos trabajado todos los equipos diviendo el trabajo de la siguiente manera:
   
