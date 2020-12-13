@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ISOFT2-2021-BC01</name>
+	<name>Gestion_cadena_restaurante_3</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -20,4 +20,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Lib/mysql-connector-java-5.1.49-bin.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/mysql-connector-java-5.1.49-bin.jar</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ISOFT2-2021-BC01</groupId>
-  <artifactId>ISOFT2-2021-BC01</artifactId>
+  <artifactId>Gestion_cadena_restaurante_3</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>ISOFT2-2021-BC01</name>
+  <name>Gestion_cadena_restaurante_3</name>
   <url>http://maven.apache.org</url>
 
   <properties>
