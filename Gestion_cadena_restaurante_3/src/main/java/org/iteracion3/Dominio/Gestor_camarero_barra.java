@@ -6,13 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.iteracion3.Persistencia.Agente_BBDD;
 
-public class Gestor_cocina extends Agente_BBDD{
+public class Gestor_camarero_barra extends Agente_BBDD{
 
-	public boolean actualizar_ingredientes() {
+	public boolean actualizar_bebidas() {
 		
-		String sql = "SELECT * FROM ingredientes WHERE idingrediente=?";
+		String sql = "SELECT * FROM bebidas WHERE idbebida=?";
 		PreparedStatement ps = null;
 		Connection con = getAgente();
 		
@@ -20,12 +21,12 @@ public class Gestor_cocina extends Agente_BBDD{
 				ps = con.prepareStatement(sql);
 				ResultSet resultado = ps.executeQuery(sql);
 				if (resultado!=null){
-					System.out.println("DECREMENTO DE INGREDIENTES:");
+					System.out.println("DECREMENTO DE BEBIDAS:");
 					while(resultado.next()){
-						int id = resultado.getInt("idingrediente");
+						int id = resultado.getInt("idbebida");
 						String nombre = resultado.getString("nombre");
 						System.out.println("Se ha utilizado un/a "+nombre);
-						String sql1 = "UPDATE ingredientes SET cantidad= cantidad-'1' WHERE idingrediente="+id;
+						String sql1 = "UPDATE bebidas SET cantidad= cantidad-'1' WHERE idbebida="+id;
 						PreparedStatement ps1 = null;
 						Connection con1 = getAgente();
 						ps1 = con1.prepareStatement(sql1);

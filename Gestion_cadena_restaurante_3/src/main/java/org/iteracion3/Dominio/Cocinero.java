@@ -3,7 +3,7 @@ package org.iteracion3.Dominio;
 
 public class Cocinero {
 
-	private String nombre;
-	private int id_trabajador;
+	private int id_cocinero;
+	private String nombre_cocinero;
 
 }
