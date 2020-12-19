@@ -1,24 +1,27 @@
 package org.iteracion2.Persistencia;
 
 import java.sql.*;
-import java.util.ArrayList;
+import java.util.Vector;
 
 public class Agente_BBDD {
 	//instancia del agente
 	protected static Agente_BBDD mInstancia=null;
 	//Conexion con la base de datos
 	protected static Connection mBD;
+	private static final String user = "BC01";
+	private static final String password = "@ISoft2.2020#";
 	//Identificador ODBC de la base de datos
 	private static String url="jdbc:mysql://172.20.48.70:3306/BC01dbservice?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	//Driven para conectar con bases de datos Microsoft Access 
 	
-	private static String driver="com.mysql.jdbc.Driver";
-	
+	private static String driver="com.mysql.cj.jdbc.Driver";
+
 	//Constructor
 	private Agente_BBDD()throws Exception {
 		conectar();
 
 	}
+
 
 	public static Agente_BBDD getAgente() throws Exception{
 		if (mInstancia==null){
@@ -35,8 +38,10 @@ public class Agente_BBDD {
 		    System.out.println("Error al registrar el driver de MySQL: " + ex);
 		}
 		
-		mBD=DriverManager.getConnection(url);
+		mBD=DriverManager.getConnection(url, user, password);
+		desconectar();
 	}
+
 
 	//Metodo para desconectar de la base de datos
 	private void desconectar() throws Exception{
@@ -53,25 +58,27 @@ public class Agente_BBDD {
 		return res;
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public ArrayList select(String SQL) throws SQLException, Exception{
+	public Vector<String> select(String SQL) throws SQLException,Exception{
 
-		PreparedStatement select = mBD.prepareStatement(SQL);
+
+		PreparedStatement select =
+				mBD.prepareStatement(SQL);
+
 
 		ResultSet s = select.executeQuery();
-		ArrayList auxiliar = new ArrayList();
+		Vector<String> auxiliar = null;
 		while (s.next()) {
-			auxiliar.add(s.getInt("idPlato"));
-			auxiliar.add(s.getString("nombre"));
-			auxiliar.add(s.getInt("cantidad"));
-			auxiliar.add(s.getFloat("Precio"));
-			auxiliar.add(s.getArray("ingredientes"));
-			
+			auxiliar=new Vector<String>();
+			auxiliar.add((String)s.getString("id_camarero"));
+			auxiliar.add((String)s.getString("nombre"));
+			auxiliar.add((String)s.getString("mesa"));
 		}	
 
+
 		this.desconectar();	
-		
 		return auxiliar;
+
+
 	}
 
 }
