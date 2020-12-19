@@ -1,11 +1,16 @@
-package Dominio;
+package org.iteracion1.Dominio;
 
 public class Camarero_Sala {
 
     private int id_camarero;
     private String nombre;
     private Mesa mesa;
-
+    
+    public Camarero_Sala(int id, String nombre) {
+    	this.id_camarero=id;
+    	this.nombre=nombre;
+    }
+    
     public Camarero_Sala(int id, String nombre, Mesa mesa) {
     	this.id_camarero=id;
     	this.nombre=nombre;

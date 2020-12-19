@@ -1,5 +1,4 @@
-package Dominio;
-
+package org.iteracion1.Dominio;
 
 public class Cliente {
 

@@ -1,4 +1,4 @@
-package Persistencia;
+package org.iteracion1.Persistencia;
 
 import java.sql.*;
 import java.util.Vector;
@@ -8,13 +8,13 @@ public class Agente_BBDD {
 	protected static Agente_BBDD mInstancia=null;
 	//Conexion con la base de datos
 	protected static Connection mBD;
+	private static final String user = "BC01";
+	private static final String password = "@ISoft2.2020#";
 	//Identificador ODBC de la base de datos
 	private static String url="jdbc:mysql://172.20.48.70:3306/BC01dbservice?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	//Driven para conectar con bases de datos Microsoft Access 
 	
-	private static String driver="com.mysql.jdbc.Driver";
-	
-	
+	private static String driver="com.mysql.cj.jdbc.Driver";
 
 	//Constructor
 	private Agente_BBDD()throws Exception {
@@ -38,7 +38,8 @@ public class Agente_BBDD {
 		    System.out.println("Error al registrar el driver de MySQL: " + ex);
 		}
 		
-		mBD=DriverManager.getConnection(url);
+		mBD=DriverManager.getConnection(url, user, password);
+		desconectar();
 	}
 
 
