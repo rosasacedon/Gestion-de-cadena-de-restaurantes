@@ -1,4 +1,4 @@
-package org.iteracion1.Dominio;
+package org.iteracion4.Dominio;
 
 public enum Estados { Libre, 
 	Reservada, 
@@ -8,4 +8,5 @@ public enum Estados { Libre,
 	servida, 
 	espera_cuenta, 
 	pagando, 
-	preparacion}
+	preparacion
+	}
