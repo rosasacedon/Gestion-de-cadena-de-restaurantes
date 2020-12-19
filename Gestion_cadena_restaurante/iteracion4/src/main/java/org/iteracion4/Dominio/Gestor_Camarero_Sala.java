@@ -27,6 +27,18 @@ public class Gestor_Camarero_Sala {
 		return comidas;
 	}
 	
+	@SuppressWarnings("resource")
+	private ArrayList<String> obtener_bebidas() {
+		Scanner sc = new Scanner(System.in);
+		Mesa m = new Mesa();
+		ArrayList<String> bebidas=new ArrayList<String>();
+		for (int i=0; i< m.getNum_comensales_int(); i++) {
+			System.out.println("Introduzca la bebida:");
+			String bebida = sc.nextLine();
+			bebidas.add(bebida);
+		}
+		return bebidas;
+	}
 	public void marcar_estado_mesa(String opcion) {
 		Mesa mesa = new Mesa();
 		switch (opcion) {
