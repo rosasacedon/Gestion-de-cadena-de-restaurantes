@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Agente_BBDD.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">iteracion1</a> &gt; <a href="index.source.html" class="el_package">org.iteracion1.Persistencia</a> &gt; <span class="el_source">Agente_BBDD.java</span></div><h1>Agente_BBDD.java</h1><pre class="source lang-java linenums">package org.iteracion1.Persistencia;
+
+import java.sql.*;
+import java.util.Vector;
+
+public class Agente_BBDD {
+	//instancia del agente
+<span class="nc" id="L8">	protected static Agente_BBDD mInstancia=null;</span>
+	//Conexion con la base de datos
+	protected static Connection mBD;
+	private static final String user = &quot;BC01&quot;;
+	private static final String password = &quot;@ISoft2.2020#&quot;;
+	//Identificador ODBC de la base de datos
+<span class="nc" id="L14">	private static String url=&quot;jdbc:mysql://172.20.48.70:3306/BC01dbservice?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&quot;;</span>
+	//Driven para conectar con bases de datos Microsoft Access 
+	
+<span class="nc" id="L17">	private static String driver=&quot;com.mysql.cj.jdbc.Driver&quot;;</span>
+
+	//Constructor
+<span class="nc" id="L20">	private Agente_BBDD()throws Exception {</span>
+<span class="nc" id="L21">		conectar();</span>
+
+<span class="nc" id="L23">	}</span>
+
+
+	public static Agente_BBDD getAgente() throws Exception{
+<span class="nc bnc" id="L27" title="All 2 branches missed.">		if (mInstancia==null){</span>
+<span class="nc" id="L28">			mInstancia=new Agente_BBDD();</span>
+		}
+<span class="nc" id="L30">		return mInstancia;</span>
+	}
+
+	//Metodo para realizar la conexion a la base de datos 
+	private void conectar() throws Exception {
+		try {
+<span class="nc" id="L36">			Class.forName(driver);</span>
+<span class="nc" id="L37">		} catch (ClassNotFoundException ex) {</span>
+<span class="nc" id="L38">		    System.out.println(&quot;Error al registrar el driver de MySQL: &quot; + ex);</span>
+<span class="nc" id="L39">		}</span>
+		
+<span class="nc" id="L41">		mBD=DriverManager.getConnection(url, user, password);</span>
+<span class="nc" id="L42">		desconectar();</span>
+<span class="nc" id="L43">	}</span>
+
+
+	//Metodo para desconectar de la base de datos
+	private void desconectar() throws Exception{
+<span class="nc" id="L48">		mBD.close();</span>
+<span class="nc" id="L49">	}</span>
+
+	//Metodo para realizar una insercion en la base de datos
+	public int insert(String SQL) throws SQLException, Exception{ 
+<span class="nc" id="L53">		conectar();</span>
+<span class="nc" id="L54">		PreparedStatement stmt = mBD.prepareStatement(SQL);</span>
+<span class="nc" id="L55">		int res=stmt.executeUpdate();</span>
+<span class="nc" id="L56">		stmt.close();</span>
+<span class="nc" id="L57">		desconectar();</span>
+<span class="nc" id="L58">		return res;</span>
+	}
+
+	public Vector&lt;String&gt; select(String SQL) throws SQLException,Exception{
+
+
+<span class="nc" id="L64">		PreparedStatement select =</span>
+<span class="nc" id="L65">				mBD.prepareStatement(SQL);</span>
+
+
+<span class="nc" id="L68">		ResultSet s = select.executeQuery();</span>
+<span class="nc" id="L69">		Vector&lt;String&gt; auxiliar = null;</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">		while (s.next()) {</span>
+<span class="nc" id="L71">			auxiliar=new Vector&lt;String&gt;();</span>
+<span class="nc" id="L72">			auxiliar.add((String)s.getString(&quot;id_camarero&quot;));</span>
+<span class="nc" id="L73">			auxiliar.add((String)s.getString(&quot;nombre&quot;));</span>
+<span class="nc" id="L74">			auxiliar.add((String)s.getString(&quot;mesa&quot;));</span>
+		}	
+
+
+<span class="nc" id="L78">		this.desconectar();	</span>
+<span class="nc" id="L79">		return auxiliar;</span>
+
+
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

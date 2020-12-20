@@ -1,3 +1,5 @@
+# ISOFT2-2021-BC01
+=======
 # Gestion-de-cadena-de-restaurantes
 
 La realización del proyecto ha ido seguido por una serie de reuniones que hemos podido realizar semanalmente los sabados sobre las 11:00 h, o bien a las 16:00 h. 
