@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+iteracion4,org.iteracion4.Dominio,Cliente,24,0,0,0,10,0,7,0,7,0
+iteracion4,org.iteracion4.Dominio,Camarero_Sala,42,0,0,0,18,0,8,0,8,0
+iteracion4,org.iteracion4.Dominio,Cuenta,173,0,6,0,50,0,13,0,10,0
+iteracion4,org.iteracion4.Dominio,Mesa,31,0,0,0,13,0,9,0,9,0
+iteracion4,org.iteracion4.Dominio,Gestor_Camarero_Sala,148,0,22,0,33,0,19,0,5,0
+iteracion4,org.iteracion4.Dominio,Estados,108,0,0,0,9,0,4,0,4,0
+iteracion4,org.iteracion4.Persistencia,AgenteBBDD,145,0,6,0,45,0,11,0,8,0
+iteracion4,org.iteracion4.Presentacion,IU_camarero,7,0,0,0,2,0,2,0,2,0
