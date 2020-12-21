@@ -1,0 +1,15 @@
+org\iteracion3\Presentacion\IU_Cocina$1.class
+org\iteracion3\Dominio\Cocinero.class
+org\iteracion3\Dominio\Camarero.class
+org\iteracion3\Presentacion\IU_Almacen$1.class
+org\iteracion3\Presentacion\IU_Camarero_barra.class
+org\iteracion3\Dominio\Cocina.class
+org\iteracion3\Dominio\Gestor_camarero_barra.class
+org\iteracion3\Dominio\Gestor_almacen.class
+org\iteracion3\Presentacion\IU_Almacen.class
+org\iteracion3\Dominio\Almacen.class
+org\iteracion3\Presentacion\IU_Camarero_barra$1.class
+org\iteracion3\Dominio\Gestor_cocina.class
+org\iteracion3\Persistencia\Agente_BBDD.class
+org\iteracion3\Dominio\Camarero_barra.class
+org\iteracion3\Presentacion\IU_Cocina.class
