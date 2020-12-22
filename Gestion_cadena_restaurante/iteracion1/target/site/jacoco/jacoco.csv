@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+iteracion1,org.iteracion1.Dominio,Camarero_Sala,42,0,0,0,18,0,8,0,8,0
+iteracion1,org.iteracion1.Dominio,gestor_Jefe_de_Sala,282,0,48,0,60,0,42,0,10,0
+iteracion1,org.iteracion1.Dominio,Estados,108,0,0,0,9,0,4,0,4,0
+iteracion1,org.iteracion1.Dominio,Jefe_de_Sala,17,0,0,0,7,0,5,0,5,0
+iteracion1,org.iteracion1.Dominio,Mesa,38,0,0,0,16,0,11,0,11,0
+iteracion1,org.iteracion1.Dominio,Cliente,24,0,0,0,10,0,7,0,7,0
+iteracion1,org.iteracion1.Dominio,Main,10,0,0,0,4,0,2,0,2,0
+iteracion1,org.iteracion1.Presentacion,IU_Jefe_de_Sala,4,0,0,0,2,0,2,0,2,0
+iteracion1,org.iteracion1.Persistencia,Agente_BBDD,100,0,4,0,35,0,9,0,7,0
